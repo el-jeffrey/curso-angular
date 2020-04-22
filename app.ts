@@ -1,27 +1,63 @@
 (function () {
 
-    var nombre: string = 'OTorres';
-    var edad: number = 24;
-    var fecha_nacimiento: Date = new Date();
-    var modo_vacaciones: any = 4;
+    //Tipos de Parámetros:
+    //Obligatorios, Opcionales se declaran (?:tipo_de_dato), Por Defectos
 
-    let nombre_dev: string = 'Javier';
-
-    if (true) {
-        let nombre_dev = 'Sandoval'
+    /*function suma(a: number, c: number = 5, b?: number): number {
+        if (b) {
+            return a + b + c;
+        }
+        return a + c;
     }
 
-    function name(parametro: string) {
-        console.log('-Mi nombre es:' + nombre + '. \n-Mi edad es: ' + edad)
-        console.log(`
--Mi nombre es: ${nombre}. 
--Mi edad es: ${edad}`)
+    console.log(suma(1,2));
+    */
+
+    //Función con nombre
+    /*
+    function picking(cantidad: number, posicion?: string, msu: string = 'MJ') {
+        return `Robots pickeando ${cantidad} productos en la MSU ${msu}, en la posición ${posicion}`;
     }
+    console.log(picking(4, 'A5'));
+    */
 
+    //Funciones Anónimas Sintaxis
+    /*var x = function (a: number, b: number) {
+        return a + b;
+    }
+    console.log(x(4, 7));*/
 
+    /*
+        
+        //Función con nombre
+        function saludar() {
+            console.log(mensaje())
+            function mensaje() {
+                return otraFuncion();
+                function otraFuncion(){
+                    return 'Jeffrey'
+                }
+            }
+        }
     
+        //Función con nombre
+        function saludarAnom() {
+            var mensaje = function () {
+                return 'Jeffrey'
+            }
+            console.log(mensaje())        
+        }
+    
+        saludar();
+        saludarAnom();
+    */
 
+    /** Ejercicio 1
+     * a=2;
+     * b=3;
+     * res = (2*2) + (3*3);
+     * res= 4+9 =13;
+     */
 
-    name(nombre_dev);
 
 })();
