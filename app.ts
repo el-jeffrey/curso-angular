@@ -1,55 +1,32 @@
 (function () {
 
-    /** Ejercicio 1
-     * a=2;
-     * b=3;
-     * res = (2*2) + (3*3);
-     * res= 4+9 =13;
-     */
-
-
-    var sumaCuadrados = (a: number, b: number) => {
-        var cuadrado = (valor: number) => valor * valor;
-        return (cuadrado(a) + cuadrado(b));
-    }
-
-    console.log(`El cuadrado es: ${sumaCuadrados(5, 8)}`)
-
-
     /*
-   function saludar(destinatario: string): void {
-       console.log(`Hola ${destinatario}`)
-   }
+    console.log('start')
 
-   var saludarArrow=(destinatario:string)=>{
-       console.log(`Hola ${destinatario}`);
-   }
+    const promesa = new Promise((resuelto, fallo) => {
+        fallo('tobn')
+    })
 
-   saludar('Oscar');
-   saludarArrow('OscarArrow');
-   */
+    promesa.then(x => console.log(x))
+        .catch(x => console.warn(x, 'error'))
 
-    var suma = (a: number, b: number) => a + b;
+    console.log('end')
+    */
 
-    function sumaNormal(a: number, b: number) {
-        return a + b;
+    const pincking = (cantidad: number) => {
+        let inventario = 50;
+        return new Promise((resuelto, fallo) => {
+            if (cantidad > inventario) {
+                fallo(`No hay cantidad suficiente en inventario`)
+            } else {
+                resuelto(`Ok, el nuevo saldo es ${(inventario -= cantidad)}`)
+            }
+        })
     }
 
-    console.log(suma(1, 2));
-    console.log(sumaNormal(1, 2));
+    pincking(80)
+        .then(x => console.log(x))
+        .catch(x => console.error(x));
 
-    const SKU: any = {
-        nombre: 'Taladro',
-        saludar() {
-            setTimeout(function name() {
-                console.log(`Hola, soy el sku ${this.nombre}`)
-            }, 200);
-            setTimeout(() => {
-                console.log(`Hola flecha, soy el sku ${this.nombre}`)
-            }, 1000);
-        }
-    }
-
-    SKU.saludar();
 
 })();
