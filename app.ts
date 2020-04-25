@@ -80,7 +80,7 @@
     }
 
     class Triangulo extends Figura {
-        constructor(color: string, base: number, altura: number) {
+        constructor(color: string, base: number, public altura: number) {
             super(color, base);
             console.log(`El área del triangulo de color ${color} es ${this.getArea(base, altura)}`)
         }
