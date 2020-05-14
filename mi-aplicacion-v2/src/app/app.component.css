@@ -1,0 +1,8 @@
+.clase-negrita{
+    font-weight: bold;
+    color:red;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }

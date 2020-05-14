@@ -1,0 +1,38 @@
+<p class="clase-negrita">{{estudiante}}</p>
+<p *ngIf="mostrar">{{estudiante}}</p>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Edad</th>
+    <th>Opciones</th>
+    <th>Año de Nacimiento</th>
+    <th>Cumpleaños</th>
+  </tr>
+  <tr *ngFor="let e of estudiantes">
+    <td>
+      {{e.nombre | uppercase}}
+    </td>
+    <td>
+      {{e.edad}}
+    </td>
+    <td>
+      <input type="text" [disabled]="e.edad == 26">
+      <button [disabled]="e.edad == 26">El botón</button>
+    </td>
+    <td>
+      {{e.anio | number}}
+    </td>
+    <td>
+      {{e.cumpleanio | date:"dd/MM/yyyy"}}
+    </td>
+  </tr>
+</table>
+<br>
+{{.942343232|number:'1.1-1'}}
+<p>
+  El cumpleaños del primer estudiante es: {{estudiantes[0].cumpleanio| date:formato }}
+</p>
+<button (click)="this.formatoFecha = !this.formatoFecha; otraFuncion('Carlos')">Cambiar formato ({{formatoFecha}})</button>
+
+<app-prueba-falton></app-prueba-falton>
