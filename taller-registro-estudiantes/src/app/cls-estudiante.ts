@@ -1,10 +1,7 @@
 export class Estudiante {
     constructor(
-        public nombres: string = '',
-        public cumpleanios: Date = null,
-        public correo: string = '',
-        public mensualidad: number = null
-    ) {}
+        public nombres: string = '', public cumpleanios: Date = null,
+        public correo: string = '', public mensualidad: number = null) {}
 
     obtenerEdad = () => {
         if (this.cumpleanios != null) {

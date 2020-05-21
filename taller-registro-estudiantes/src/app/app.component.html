@@ -1,61 +1,13 @@
-<h1>Registro de Estudiantes</h1>
-<div class="full-w" style="display: flex;">
-  <div class="ly-tabla">
-    <table id="tabla" class="tabla table table-bordered full-w">
-      <tr>
-        <th>#</th>
-        <th>Estudiante</th>
-        <th>Edad</th>
-        <th>Cumpleaños</th>
-        <th>Correo</th>
-        <th>Mensualidad</th>
-        <th></th>
-      </tr>
-      <tr *ngFor="let e of estudiantes; index as i">
-        <td>{{i + 1}}</td>
-        <td>{{e.nombres}}</td>
-        <td>{{e.obtenerEdad()}}</td>
-        <td>{{e.cumpleanios | date:'dd/MM/yyyy'}}</td>
-        <td>{{e.correo}}</td>
-        <td>{{e.mensualidad | number:'1.1-2'}}</td>
-        <td>
-          <button (click)="onEdit(e, i)">Editar</button>
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="ly-form">
-    <table class="form full-w">
-      <tr>
-        <th>Registro/Edición de Estudiante<div style="text-align: end;"><button (click)="onNew()">Nuevo</button></div>
-        </th>
-      </tr>
-      <tr>
-        <td><input type="text" placeholder="Nombre Completo" class="full-w" [(ngModel)]="estudiante_selected.nombres">
-        </td>
-      </tr>
-      <tr>
-        <td><input type="text" placeholder="Correo" type="email" class="full-w"
-            [(ngModel)]="estudiante_selected.correo">
-        </td>
-      </tr>
-      <tr>
-        <td><input type="date" class="full-w" [(ngModel)]="estudiante_selected.cumpleanios">
-        </td>
-      </tr>
-      <tr>
-        <td><input type="text" placeholder="Mensualidad" type="number" class="full-w" [(ngModel)]="estudiante_selected.mensualidad">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <br>
-          <button class="full-w" (click)="save()">{{posicion >= 0? 'Actualizar' : 'Registrar'}} [{{posicion}}]</button>
-        </td>
-      </tr>
-    </table>
-  </div>
+<h1>La aplicación de los Estudiantes</h1>
+<hr>
+<div>
+  <a [routerLink]="['/estudiantes-view']">Registro de Estudiantes</a>
+  |
+  <a [routerLink]="['/quienes-somos']">Quienes somos</a>
 </div>
+<hr>
+<router-outlet></router-outlet>
+<hr>
 <div class="full-w" style="text-align: end; margin-top: 20px;">
   <strong>Jeffrey Espinel</strong>
 </div>
