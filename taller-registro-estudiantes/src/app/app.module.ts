@@ -7,6 +7,9 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { EstudiantesComponent } from './estudiantes/estudiantes.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TotalEstudiantesComponent } from './total-estudiantes/total-estudiantes.component'
+import { DatosService } from './datos.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 const appRoutes: Routes = [
   {
@@ -33,9 +36,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DatosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
