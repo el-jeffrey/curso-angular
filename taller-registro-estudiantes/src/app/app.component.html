@@ -6,7 +6,17 @@
   <a [routerLink]="['/quienes-somos']">Quienes somos</a>
 </div>
 <hr>
-<router-outlet></router-outlet>
+<div class="full-w" style="display: flex;">
+  <div class="ly-router">
+    <router-outlet></router-outlet>
+  </div>
+  <div style="width: 10px;"></div>
+  <div class="ly-lista">
+    <app-lista-comentarios-covid></app-lista-comentarios-covid>
+  </div>
+  
+</div>
+
 <hr>
 <div class="full-w" style="text-align: end; margin-top: 20px;">
   <strong>Jeffrey Espinel</strong>

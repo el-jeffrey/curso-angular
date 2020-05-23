@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TotalEstudiantesComponent } from './total-estudiantes/total-estudiantes.component'
 import { DatosService } from './datos.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ListaComentariosCovidComponent } from './lista-comentarios-covid/lista-comentarios-covid.component';
 
 
 const appRoutes: Routes = [
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     AppComponent,
     QuienesSomosComponent,
     EstudiantesComponent,
-    TotalEstudiantesComponent
+    TotalEstudiantesComponent,
+    ListaComentariosCovidComponent
   ],
   imports: [
     BrowserModule,

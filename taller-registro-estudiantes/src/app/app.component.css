@@ -24,3 +24,14 @@
     border: 1px solid #ddd;
     padding: 8px;
   }
+
+
+  .ly-router{
+    width: 70%;
+    background-color: lightblue;
+}
+
+.ly-lista{
+    width: 30%;
+    background-color: whitesmoke;
+}

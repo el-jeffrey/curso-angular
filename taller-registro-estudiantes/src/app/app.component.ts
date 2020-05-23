@@ -7,20 +7,15 @@ import { DatosService } from './datos.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
 
   familias:any[]=[];
   constructor(private api: DatosService) {
     this.onCargarFamilias();
   }
 
-  ngOnInit(): void {
-    
-    
-  }
-
-
   onCargarFamilias = () => {
+    //llamar la función de un service
     this.api.get_familias_productos().subscribe(
       data => {
         console.log(data, 'familia')
