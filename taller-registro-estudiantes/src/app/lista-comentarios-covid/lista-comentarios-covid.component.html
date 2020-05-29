@@ -1,0 +1,30 @@
+<div class="ly-form">
+    <table class="form full-w">
+      <tr>
+        <th>Comentario Covid<div style="text-align: end;"><button (click)="onRefresh()">Refresh</button></div>
+        </th>
+      </tr>
+      <tr >
+        <td style="padding-top: 20px !important;">
+            <input type="text" placeholder="Comentario" class="full-w" [(ngModel)]="txt_comentario">
+            <br>
+            <button class="full-w" (click)="onSaveComentarioCovid()"  [disabled]="txt_comentario==''">Publicar</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+<hr>
+
+<table class="form full-w">
+    <tr  *ngFor="let c of comentarios">
+      <td  style="display: flex;">
+          <span *ngIf="c.estado == 'R'" style="text-decoration: line-through;">{{c.comentario}}</span> 
+          <span *ngIf="c.estado == 'A'">{{c.comentario}}</span> 
+          <small style="color:green" *ngIf="c.estado == 'R'">[{{c.fechalog | date:'dd/MM/yyyy hh:mm'}}]</small>          
+          <small style="color:red"  *ngIf="c.estado == 'A'">[{{c.fechalog | date:'dd/MM/yyyy hh:mm'}}]</small>          
+          <button (click)="onSaveComentarioCovid(c)"  *ngIf="c.estado == 'A'">Atendido</button>
+      </td>
+    </tr>
+  </table>
+

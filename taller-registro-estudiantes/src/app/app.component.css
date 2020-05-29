@@ -1,0 +1,37 @@
+.ly-tabla{
+    width: 70%;
+    background-color: lightblue;
+}
+
+.ly-form{
+    width: 30%;
+    background-color: aliceblue;
+    margin-left: 4%;
+}
+
+.tabla{
+}
+
+.form{
+    padding: 10px;
+}
+
+.full-w{
+    width: 100%;
+}
+
+#tabla td, #tabla th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+
+  .ly-router{
+    width: 70%;
+    background-color: lightblue;
+}
+
+.ly-lista{
+    width: 30%;
+    background-color: whitesmoke;
+}

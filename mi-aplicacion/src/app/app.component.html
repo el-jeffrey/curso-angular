@@ -1,0 +1,19 @@
+<h1>Angular Sodimac - {{title}}</h1>
+
+<select name="cmbTipo" id="cmbTipo" [(ngModel)]="tipo">
+  <option value="T">Triangulo</option>
+  <option value="C">Cuadrado</option>
+</select>
+<br>
+<input type="number"  [(ngModel)]="var_a" placeholder="Base">
+<input type="number" *ngIf="tipo == 'T'" [(ngModel)]="var_b" 
+placeholder="Altura">
+
+<button (click)="suma(var_a,var_b)">Calcular Suma</button>
+
+<p>
+  La suma de {{var_a}} + {{var_b}}= {{var_c}}
+</p>
+
+
+{{ _fecha | date : formato }}
